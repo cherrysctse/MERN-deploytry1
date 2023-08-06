@@ -31,14 +31,14 @@ router.route('/:id').get((req, res) => {
 
 router.route('/delete/:id').delete(async (req, res) => {
   console.log('delete logged');
-await Activity.findByIdAndDelete(req.params.id)
+  await Activity.findByIdAndDelete(req.params.id)
     .then(() => res.json('Activity deleted.'))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
 router.route('/update/:id').post(async (req, res) => {
   console.log(req.params.id);
-await  Activity.findById(req.params.id)
+  await Activity.findById(req.params.id)
     .then((activityforedit) => {
       activityforedit.activity = req.body.activity;
 
