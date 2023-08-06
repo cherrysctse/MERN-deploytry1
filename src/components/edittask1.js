@@ -10,7 +10,7 @@ export default function CreateTask() {
   const [activity, setOnChangeActivity] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://merndeploybackend1.onrender.com/activity/${id}`)
+      .get(`http://localhost:5000/activity/${id}`)
       .then((response) => {
         setOnChangeActivity(response.data.activity);
       })
@@ -24,11 +24,11 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
     console.log(activityvar);
 
-    console.log(`https://merndeploybackend1.onrender.com/activity/update/${id}`);
+    console.log(`http://localhost:5000/activity/update/${id}`);
     // console.log(e)
 
     axios
-      .post(`https://merndeploybackend1.onrender.com/activity/update/${id}`, activityvar)
+      .post(`http://localhost:5000/activity/update/${id}`, activityvar)
       .then((res) => {
         window.location = '/';
       });

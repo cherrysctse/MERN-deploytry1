@@ -10,7 +10,7 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
 
     axios
-      .post('https://merndeploybackend1.onrender.com/activity/add', activityvar)
+      .post('http://localhost:5000/activity/add', activityvar)
       .then((res) => {
         window.location = '/';
       });
