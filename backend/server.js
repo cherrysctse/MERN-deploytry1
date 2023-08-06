@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // const uri = process.env.ATLAS_URI;
-const uri = "mongodb://127.0.0.1:27017/activitiescollections";
+const uri = "mongodb+srv://cherry703:T71gQ2BGy2t7Fuyt@cluster0.ahtiyhi.mongodb.net/?retryWrites=true&w=majority"
 //const uri = "mongodb+srv://cherry703:q4073rqyOSNSVnGO@cluster0.ac1mmob.mongodb.net/activitiescollections";
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
