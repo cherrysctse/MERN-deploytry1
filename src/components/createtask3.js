@@ -10,7 +10,7 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
 
     axios
-      .post('https://deploybackend-newprojinaltas.onrender.com/activity/add', activityvar)
+      .post('https://deploybkend1.onrender.com/activity/add', activityvar)
       .then((res) => {
         window.location = '/';
       });

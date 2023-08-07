@@ -10,7 +10,7 @@ export default function CreateTask() {
   const [activity, setOnChangeActivity] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://deploybackend-newprojinaltas.onrender.com/activity/${id}`)
+      .get(`https://deploybkend1.onrender.com/activity/${id}`)
       .then((response) => {
         setOnChangeActivity(response.data.activity);
       })
@@ -24,11 +24,11 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
     console.log(activityvar);
 
-    console.log(`https://deploybackend-newprojinaltas.onrender.com/activity/update/${id}`);
+    console.log(`https://deploybkend1.onrender.com/activity/update/${id}`);
     // console.log(e)
 
     axios
-      .post(`https://deploybackend-newprojinaltas.onrender.com/activity/update/${id}`, activityvar)
+      .post(`https://deploybkend1.onrender.com/activity/update/${id}`, activityvar)
       .then((res) => {
         window.location = '/';
       });
